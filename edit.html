@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110386222-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-110386222-1');
+	</script>
+
+
+	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles.css"> 
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title> Edit </title>
+</head>
+
+
+<body>
+
+<!-- Top Bar -->
+<div class="topbar">
+
+	<!-- User Profile Button -->
+	<a href= "companyprofile.html">
+	<img src="userprofile.jpg" class="userProfileButton">
+	</a>
+
+	<!-- Edit Button --> 
+	<a href="editCompanyProfile.html">
+		<img src="editprofile.jpg" class="editbutton">
+	</a>
+
+	<center><p class="topbarFont">
+		iHire
+	</center></p>
+
+</div>
+
+
+<p class="editTitle">
+	Create a new position.
+</p>
+
+<!-- ~~~~~~~ Content ~~~~~~~~ -->
+<div class="content">
+
+<p class="subtitles"> Position Name </p>
+	<center><form action="home.html" method="GET">
+		<input class="textbox" type="text" id="positionName" autofocus>
+	</form></center>
+</br>
+</br>
+
+<!-- Education -->
+<p class="subtitles"> Education </p>
+	<center>
+	<form >
+      <select class="chosen" id="education">
+        <option >Associate's Degree</option>
+        <option >Bachelor's Degree</option>
+        <option >Master's Degree</option>
+        <option >Doctoral Degree</option>
+        <option >Professional Degree</option>
+      </select>
+      <br>
+    </form>
+	</center>
+
+
+</br>
+</br>
+
+<!-- License -->
+<p class="subtitles"> Licenses </p>
+	<center><form action="  ">
+		<input class="textbox" type="text" id="license" autofocus>
+	</form></center>
+
+</br>
+</br>
+
+<!-- GPA -->
+<p class="subtitles"> Minimum GPA </p>
+	<center><form action="  ">
+		<input class="textbox" type="text" id="minGPA" autofocus>
+	</form></center>
+</br>
+</br>
+
+
+<!-- Create Button -->
+<center><button onclick="createPos()" id="create" class="create">Create</button></center>
+</div>
+
+
+<!-- Toolbar --> 
+<div class="toolbar">
+	<a href="javascript:history.back()">
+  		<img src="backbutton.jpg" class="backbutton">
+	</a>
+	
+	<a href="home.html">
+  		<img src="homebutton.jpg" class="homebutton">
+	</a>
+	
+	<a href="favorites.html">
+  		<img src="likelist.jpg" class="likelistbutton">
+	</a>
+
+</div>
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html> 

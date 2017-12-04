@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110386222-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-110386222-1');
+	</script>
+
+	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles.css"> 
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title> Mary</title>
+</head>
+
+
+<body>
+
+
+<!-- Top Bar -->
+<div class="topbar">
+
+	<!-- User Profile Button -->
+	<a href= "companyprofile.html">
+	<img src="userprofile.jpg" class="userProfileButton">
+	</a>
+
+	<!-- Edit Button --> 
+	<a href="editCompanyProfile.html">
+		<img src="editprofile.jpg" class="editbutton">
+	</a>
+
+	<center><p class="topbarFont">
+		iHire
+	</center></p>
+
+</div>
+
+
+
+<!-- Logo -->
+<div class="content">
+<center><p class="profilename" id="profilename"> Mary</p>
+<img src="Mary.jpg" alt="Picture" class="profilepic" >
+</br>
+<!-- p class ="extra"> -->
+	<a class ="extra" href="resume.html">View Resume</a> 
+<!-- </p>-->
+</center>
+</br>
+<p class="subtitles"> Work Experience </p>
+<center><p class="workExp"> 
+	- Tech Stars: Receptionist </br>
+	- Tree After School Program: Front Desk </br>
+	- Forever 21: Sales Associate </br>
+	- Claire's: Sales Associate
+</p></center>
+
+
+<center>
+	<button id="thumbButton" onclick="liked()" > <img src="blankthumb.jpg" alt="Picture" class="thumb" id="thumb" > </button>
+</br>
+	<button id="sendEmail" class="sendEmail" onclick="window.location.href='sendEmail.html'">Send Email</button>
+</center>
+</div>
+
+
+<!-- Toolbar --> 
+<div class="toolbar">
+	<a href="javascript:history.back()">
+  		<img src="backbutton.jpg" class="backbutton">
+	</a>
+	
+	<a href="home.html">
+  		<img src="homebutton.jpg" class="homebutton">
+	</a>
+	
+	<a href="favorites.html">
+  		<img src="likelist.jpg" class="likelistbutton">
+	</a>
+
+</div>
+
+
+
+
+
+<script>
+var profName = document.getElementById("profilename").innerHTML;
+if( localStorage.getItem(profName+"liked") != "yes") {
+	document.getElementById("thumb").src = "blankthumb.jpg";
+}
+else {
+	document.getElementById("thumb").src = "filledthumb.jpg";
+}
+var name = document.getElementById("profilename").innerHTML
+localStorage.setItem("name", name);
+</script>
+
+
+<script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110386222-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-110386222-1');
+	</script>
+
+
+	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles.css"> 
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title> Edit Company Profile</title>
+</head>
+
+
+<body>
+
+<!-- Top Bar -->
+<div class="topbar">
+
+	<!-- User Profile Button -->
+	<a href= "companyprofile.html">
+	<img src="userprofile.jpg" class="userProfileButton">
+	</a>
+
+	<!-- Edit Button --> 
+	<a href="editCompanyProfile.html">
+		<img src="editprofile.jpg" class="editbutton">
+	</a>
+
+	<center><p class="topbarFont">
+		iHire
+	</center></p>
+
+</div>
+
+<p class="editTitle">
+	Edit your profile.
+</p>
+
+<div class="content">
+<center><img src="logo.jpeg" alt="Logo" class="profilepic" id="company" ></center>
+</br><center>
+<label for="upload-file" class="extra"> Upload new profile picture </label>
+<input id="upload-file" type="file" onchange="getFile()"/>
+</br>
+</br>
+
+	<form>
+		<label for="companyName" class="editCompProfile">Company Name: </label>
+		<center><input class="login" type="text" id="companyName" autofocus></center>
+	</form>
+</br>
+	<form>
+		<label for="description" class="editCompProfile">Description:   </label></br>
+		<center><textarea rows="4" cols="50" class="description" id="description">
+		</textarea></center>
+		<!-- <center><input class="login" type="text" id="password" autofocus></center>-->
+	</form>
+</br>
+<center>
+<button onclick="window.location.href='javascript:history.back()'" id="cancel" class="save">Cancel</button>
+<button onclick="save()" id="save" class="save">Save</button>
+</center>
+
+</div>
+
+
+
+
+
+<!-- Toolbar --> 
+<div class="toolbar">
+	<a href="javascript:history.back()">
+  		<img src="backbutton.jpg" class="backbutton">
+	</a>
+	
+	<a href="home.html">
+  		<img src="homebutton.jpg" class="homebutton">
+	</a>
+	
+	<a href="favorites.html">
+  		<img src="likelist.jpg" class="likelistbutton">
+	</a>
+
+</div>
+
+
+
+<script>
+if (localStorage.getItem("profilePic") != null) {
+	document.getElementById("company").src = localStorage.getItem("profilePic");
+}
+
+function getFile() {
+	var fileString = document.getElementById("upload-file").value;
+	var fileName = fileString.split(/(\\|\/)/g).pop();
+	localStorage.setItem("profilePic", fileName);
+	document.getElementById("company").src = localStorage.getItem("profilePic");
+}
+
+
+
+</script>
+
+
+
+<script src="script.js"></script>
+</body>
+</html> 

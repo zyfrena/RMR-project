@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110386222-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-110386222-1');
+	</script>
+
+
+	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles.css"> 
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title> Mike </title>
+</head>
+
+
+<body>
+
+
+<!-- Top Bar -->
+<div class="topbar">
+
+	<!-- User Profile Button -->
+	<a href= "companyprofile.html">
+	<img src="userprofile.jpg" class="userProfileButton">
+	</a>
+
+	<!-- Edit Button --> 
+	<a href="editCompanyProfile.html">
+		<img src="editprofile.jpg" class="editbutton">
+	</a>
+
+	<center><p class="topbarFont">
+		iHire
+	</center></p>
+
+</div>
+<!-- <label for="recipient" class="recipientLabel">Recipient email:</label> -->
+<input id = "recipient" type="text" class="recipient" placeholder="To: ">
+<input id = "Cc" type="text" class="recipient" placeholder="Cc: ">
+<input id = "subject" type="text" class="recipient" placeholder="Subject: ">
+<textarea rows="15" cols="50" class="recipient" id="description"> </textarea>
+<button type="button" class="send" id="cancel" onclick="javascript:history.back()">Cancel</button>
+<button type="button" class="send" id="cancel" onclick="sendEmail()" style="float: right;">Send</button>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Toolbar --> 
+<div class="toolbar">
+	<a href="javascript:history.back()">
+  		<img src="backbutton.jpg" class="backbutton">
+	</a>
+	
+	<a href="home.html">
+  		<img src="homebutton.jpg" class="homebutton">
+	</a>
+	
+	<a href="favorites.html">
+  		<img src="likelist.jpg" class="likelistbutton">
+	</a>
+
+</div>
+
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html> 

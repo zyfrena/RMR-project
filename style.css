@@ -1,0 +1,514 @@
+/********************* OVERALL ************************/
+body {
+	margin:0;
+	height: 100%;
+	background-color: #900020;
+}
+
+
+/******************** TOPBAR *******************/
+.topbar {
+  overflow: hidden;
+  background-color: #E5E7E6;	
+  width: 100%;
+  border-bottom: 3px black solid;
+  /*overflow: hidden;
+  position: fixed;
+  top: 0;*/
+}
+
+p.topbarFont {
+	font-size: 70px;
+	font-family: "american typewriter";
+	margin-top: 10px;
+	margin-left: 10%;
+}
+
+/******************** TOOLBAR *********************/
+.toolbar {
+  overflow: hidden;
+  background-color: #E5E7E6;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 3px black solid;
+}
+
+
+.backbutton{
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-left: 80px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.homebutton {
+	width: 100px;
+	height: 100px;
+	margin-left: 255px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.likelistbutton {
+	width: 100px;
+	height: 100px;
+	float: right;
+	margin-right: 80px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+/****************** HOME PAGE *********************/
+
+
+/* EDIT BUTTON */
+.editbutton {
+	width: 110px;
+	height: 110px;
+	border: 0;
+	float: right;
+}
+
+/* USER PROFILE BUTTON */
+.userProfileButton {
+	width: 110px;
+	height: 110px;
+	border: 0;
+	float: left;
+}
+
+div.content {
+	margin-top: 40px;
+	/*overflow:auto;*/
+}
+
+
+button.view {
+	font-size: 40px;
+	padding-left: 30px;
+	border: solid black 2px;
+	width: 600px;
+	background: gray;
+	color: white;
+	border-radius: 25px 25px 25px 25px;
+}
+
+p.startHiring {
+	font-size: 100px;
+	padding-left: 30px;
+	border: solid black 2px;
+	border-left: white;
+	width: 100%;
+	background: #343434;
+	color: white;
+	text-align: center;
+}
+
+p.homeSubtitles {
+	font-size: 60px;
+	padding-left: 30px;
+	border: solid black 2px;
+	border-left: white;
+	width: 70%;
+	background: #595959;
+	color: white;
+}
+
+.openPos {
+	max-width: 80%;
+	min-width: 80%;
+    background-color: white;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 50px;
+    border: black 3px solid;
+    border-radius: 25px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.newPos {
+	max-width: 700px;
+	min-width: 700px;
+    background-color: #C0C0C0;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 50px;
+    border: black 3px solid;
+    border-radius: 25px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+div.openPositions {
+	margin-bottom: 5%;
+}
+
+/* ~~~~~~ DROP DOWN BUTTON ~~~~~~~~~~ */
+.dropbtn {
+	max-width: 600px;
+	min-width: 600px;
+    background-color: white;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 50px;
+    border: solid black 3px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: left;
+}
+
+select.chosen {
+	max-width: 600px;
+	min-width: 600px;
+    background-color: white;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 50px;
+    border: solid black 3px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    background-image: url(dropdown2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-position: right
+}
+
+
+/********************* EDIT PAGE **********************/
+p.editTitle {
+	font-size: 80px;
+	padding-left: 30px;
+	border: solid black 2px;
+	border-left: white;
+	width: 100%;
+	background: #343434;
+	color: white;
+	text-align: center;
+}
+
+div.titles{
+	min-height: 15%;
+	max-height: 15%;
+}
+
+div.content {
+	margin-top: 5%;
+}
+
+p.title {
+	text-align: center;
+	font-size: 100px;
+	font-weight: bold;
+}
+
+p.subtitles {
+	font-size: 60px;
+	padding-left: 30px;
+	border: solid black 2px;
+	border-left: white;
+	width: 500px;
+	background: #595959;
+	color: white;
+}
+
+input.textbox {
+	max-width: 600px;
+	min-width: 600px;
+    background-color: white;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 50px;
+    border: solid 3px black;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+button.create {
+	font-size: 80px;
+	padding-left: 30px;
+	border: solid black 2px;
+	width: 500px;
+	background: #343434;
+	color: white;
+	border-radius: 25px 25px 25px 25px;
+}
+
+
+
+/********************* FAVORITES PAGE ********************/
+p.favsTitle {
+	font-size: 73px;
+	padding-left: 30px;
+	border: solid black 2px;
+	border-left: white;
+	width: 100%;
+	background: #343434;
+	color: white;
+	text-align: center;
+}
+
+.chooseposition {
+	font-size: 70px;
+	padding-left: 30px;
+	border: solid black 2px;
+	border-left: white;
+	width: 700px;
+	background: gray;
+	color: white;
+	border-radius: 0px 25px 25px 0px;
+}
+
+button.candidates {
+	min-width: 100%;
+	font-size: 70px;
+	text-align: center;
+	font-weight: bold;
+	border: solid white 2px;
+	border-radius: 25px 25px 25px 25px;
+	background: black;
+	color: white;
+}
+
+select.favChosen {
+	max-width: 600px;
+	min-width: 600px;
+    background-color: #595959;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 50px;
+    border: solid black 3px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    background-image: url(dropdown.jpg);
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-position: right
+}
+
+.hidden {
+	display: none;
+}
+
+
+
+/************************* CANDIDATES PAGE ***********************/
+p.clickACandidate {
+	font-size: 50px;
+	padding-left: 30px;
+	border: solid black 2px;
+	border-left: white;
+	width: 800px;
+	background: #595959;
+	color: white;
+}
+
+p.candidatesTitle {
+	font-size: 67px;
+	padding-left: 30px;
+	border: solid black 2px;
+	border-left: white;
+	width: 100%;
+	background: #343434;
+	color: white;
+	text-align: center;
+}
+
+p.posName {
+	margin-top: 30px;
+	font-size: 80px;
+	font-weight: ;
+	color: white;
+}
+
+/************************ CANDIDATE PROFILE *******************/
+
+/* Candidate Picture */
+
+
+.heartbutton {
+	width: 15%;
+	border: 0;
+	float: right;
+	margin-left: 20px;
+}
+
+.profilepic {
+	border-radius: 50%;
+	width: 450px;
+	height: 450px;
+	border: solid 3px black;
+	background: white;
+}
+
+
+p.profilename {
+	border: black solid 2px;
+	max-width: 500px;
+	text-align: center;
+	font-size: 70px;
+	font-weight: bold;
+	color: white;
+	background: #343434;
+}
+
+button.addToFav{
+	font-size: 80px;
+	padding-left: 30px;
+	border: solid black 2px;
+	width: 600px;
+	background: #343434;
+	color: white;
+	border-radius: 25px 25px 25px 25px;
+}
+
+.thumb {
+	width: 200px;
+	height: 200px;
+}
+
+
+.workExp {
+	margin-top: 20px;
+	font-size: 40px;
+	border: solid black 3px;
+	max-width: 900px;
+	text-align: left;
+	padding: 30px;
+	font-weight: bold;
+	background: white;
+}
+
+button.sendEmail {
+	font-size: 50px;
+	border: 3px solid black;
+	background: #343434;
+	padding: 10px;
+	border-radius: 25px;
+	color: white;
+}
+
+/************************ LOG IN PAGE *********************/
+
+input.login {
+	max-width: 500px;
+	min-width: 500px;
+    background-color: white;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 50px;
+    border: 2px black solid;
+    cursor: pointer;
+}
+
+label.login {
+	font-size: 70px;
+	color:white;
+}
+
+.extra {
+	color: white;
+	text-align: center;
+	text-decoration: underline;
+	font-size: 40px;
+}
+
+
+/********************* EDIT COMPANY PROFILE ********************/
+label.editCompProfile {
+	font-size: 50px;
+	margin-left: 20px;
+	color: white;
+}
+
+textarea.description {
+	max-width: 700px;
+	min-width: 700px;
+    background-color: white;
+    color: black;
+    font-size: 40px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+button.save {
+	text-align: center;
+	font-size: 80px;
+	padding-left: 30px;
+	border: solid black 2px;
+	width: 300px;
+	background: #343434;
+	color: white;
+	border-radius: 25px 25px 25px 25px;
+}
+
+#upload-file{
+    display: none;
+}
+
+/******************** COMPANY PROFILE *******************/
+
+.compProf {
+	font-size: 60px;
+	text-decoration: bold;
+	color:white;
+}
+
+.description {
+	font-size: 40px;
+	max-width: 800px;
+	font-style: italic;
+	color: white;
+}
+
+
+/********************* RESUME ************************/
+.resumeName {
+	text-align: center;
+	font-size: 70px;
+}
+
+/******************** SEND EMAIL *********************/
+.recipientLabel {
+	font-size: 50px;
+}
+
+.recipient {
+	font-size: 50px;
+	border: solid black 3px;
+	width: 100%;
+}
+
+.send {
+	font-size: 50px;
+	width: 50%;
+	border: black solid 3px;
+}

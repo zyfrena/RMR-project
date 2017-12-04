@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110386222-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-110386222-1');
+	</script>
+
+	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles.css"> 
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title> Favorited Candidates </title>
+</head>
+
+
+
+<body>
+
+
+<!-- Top Bar -->
+<div class="topbar">
+
+	<!-- User Profile Button -->
+	<a href= "companyprofile.html">
+	<img src="userprofile.jpg" class="userProfileButton">
+	</a>
+
+	<!-- Edit Button --> 
+	<a href="editCompanyProfile.html">
+		<img src="editprofile.jpg" class="editbutton">
+	</a>
+
+	<center><p class="topbarFont">
+		iHire
+	</center></p>
+
+</div>
+
+
+<p class="favsTitle">
+	Your favorited candidates for
+</p>
+	<center>
+	<form >
+      <select class="favChosen" id="positions">
+      	<option id-"0"> Choose positions... </option>
+        <!-- <option id="1" value="Sales Representative">Sales Representative</option>
+        <option id="2" value="Receptionist">Receptionist</option> -->
+      </select>
+      <br>
+    </form>
+	</center>
+
+<!-- ~~~~~~~ CONTENT ~~~~~~~~~~ -->
+<div class="content" id="content">
+</br>
+<center><div id="contentForPos">
+	<div id="Sales Representative" class="hidden"></div>
+	<div id="Receptionist" class="hidden"></div> 
+</center></div>
+</div>
+
+
+
+<!-- Toolbar --> 
+<div class="toolbar">
+	<a href="javascript:history.back()">
+  		<img src="backbutton.jpg" class="backbutton">
+	</a>
+	
+	<a href="home.html">
+  		<img src="homebutton.jpg" class="homebutton">
+	</a>
+	
+	<a href="favorites.html">
+  		<img src="likelist.jpg" class="likelistbutton">
+	</a>
+
+</div>
+
+
+
+
+<script>
+var ids=["Sales Representative", "Receptionist"];
+var dropDown = document.getElementById("positions");
+
+var positions = JSON.parse(localStorage.getItem("positions"));
+if (positions != null) {
+	for( var i = 0; i < positions.length; i++) {
+		var posName = positions[i].positionName;
+		ids.push(posName);
+	}
+}
+for( var i = 0; i < ids.length; i++) {
+	var posName = ids[i];
+	var deletePos = localStorage.getItem(posName);
+	if ( (posName != null) && (deletePos != "delete") ) {
+		// Creating and adding new option
+		var option = document.createElement("option");
+		option.id = i + 1;
+		option.text = posName;
+		option.value = posName;
+		document.getElementById("positions").add(option);
+		// Creating and adding new div
+		var newDiv = document.createElement("div");
+	    newDiv.id = posName;
+	    newDiv.className = "hidden";
+	    document.getElementById("contentForPos").appendChild(newDiv);		
+	}
+}
+
+
+
+// Updating drop down menu
+/*var positions = JSON.parse(localStorage.getItem("positions"));
+if (positions != null) {
+	for( var i = 0; i < positions.length; i++) {
+		var posName = positions[i].positionName;
+		var deletePos = localStorage.getItem(posName);
+	  	if ( (posName != null) && (deletePos != "delete") ) {
+			// Creating and adding new option
+			var option = document.createElement("option");
+			option.id = i + 3;
+			option.text = posName;
+			option.value = posName;
+			document.getElementById("positions").add(option);
+			// Creating and adding new div
+			var newDiv = document.createElement("div");
+	    	newDiv.id = posName;
+	    	newDiv.className = "hidden";
+	    	document.getElementById("contentForPos").appendChild(newDiv);
+	    	// Updating ids array
+	    	ids.push(posName);
+		}
+	}
+}*/
+
+
+
+// Changes content on favorites page depending on selected option 
+dropDown.onchange = function(){
+	for(var i = 0; i < ids.length; i++) {
+		document.getElementById(ids[i]).style.display="none";
+	}
+	document.getElementById(this.value).style.display = "block";
+}
+
+var likes = JSON.parse(localStorage.getItem("likes"));
+if( likes != null ) {
+	for( var i = 0; i < likes.length; i++) {
+		var divId = likes[i].positionName;
+		var profName = likes[i].candidate;
+		if (profName != null ) {
+			var btn = document.createElement("BUTTON");
+			btn.className = "openPos";
+			btn.onclick = function(currentProfName) {
+				return function () {
+				location.href = currentProfName+".html";
+				}
+			}(profName);
+			var btnText = document.createTextNode( profName);
+			btn.appendChild(btnText);
+			document.getElementById(divId).appendChild(btn);
+		}	
+	}
+}
+</script>
+
+
+<script src="script.js"></script>
+</body>
+</html> 

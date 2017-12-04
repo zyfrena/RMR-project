@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110386222-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-110386222-1');
+	</script>
+
+	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles.css"> 
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title> Home2 </title>
+</head>
+
+
+<body>
+
+
+<!-- Top Bar -->
+<div class="topbar">
+
+	<!-- User Profile Button -->
+	<a href= "companyprofile.html">
+	<img src="userprofile.jpg" class="userProfileButton">
+	</a>
+
+	<!-- Edit Button --> 
+	<a href="editCompanyProfile.html">
+		<img src="editprofile.jpg" class="editbutton">
+	</a>
+
+	<center><p class="topbarFont">
+		iHire
+	</center></p>
+
+</div>
+
+<!-- Content -->
+<p class="startHiring">
+	Start hiring! 
+</p>
+</br>
+</br>
+<div id="addPosition">
+<center> 
+	<button type="button" style="background: #C0C0C0;" onclick= "addPosBtn()" class="newPos">Click to add a new position </button>
+</center>
+</div>
+
+<div class="content">
+<p class="homeSubtitles">
+	Your open positions...
+</p>
+
+<center>
+<div id="openPositions" class="openPositions">
+	<button type="button" onclick= "window.location.href='candidatesSalesRep.html'" class="openPos" id="Sales Representative">Sales Representative </button>
+	<button type="button" onclick= "window.location.href='candidatesReceptionist.html'" class="openPos" id="Receptionist">Receptionist </button>
+</div>
+</center>
+
+
+
+
+
+<!-- Toolbar --> 
+<div class="toolbar">
+	<a href="javascript:history.back()">
+  		<img src="backbutton.jpg" class="backbutton">
+	</a>
+	
+	<a href="home.html">
+  		<img src="homebutton.jpg" class="homebutton">
+	</a>
+	
+	<a href="favorites.html">
+  		<img src="likelist.jpg" class="likelistbutton">
+	</a>
+
+</div>
+
+
+
+
+
+<script>
+//  Shows newly created positions
+var positions = JSON.parse(localStorage.getItem("positions"));
+var allPos = ["Sales Representative", "Receptionist"];
+if (positions != null) {
+	for (var i = 0; i < positions.length; i++) {
+		var posName = positions[i].positionName;
+		allPos.push(posName);
+		if (posName != null) {
+			var btn = document.createElement("BUTTON");
+			btn.className = "openPos";
+			btn.id = posName;
+			btn.type = "button";
+			var btnText = document.createTextNode(posName);
+			btn.onclick = function (currentPosName) {
+				return function() {
+				localStorage.setItem("currentPosName", currentPosName);
+				location.href = "candidates.html";
+				}
+			}(posName);
+			btn.appendChild(btnText);
+			document.getElementById("openPositions").appendChild(btn);
+		}
+	}
+}
+
+// Deletes deleted positions
+for( var i = 0; i < allPos.length; i++) {
+	var deletePos = localStorage.getItem(allPos[i]);
+	if (deletePos == "delete"){
+		document.getElementById(allPos[i]).remove();
+	}
+}
+
+
+</script>
+
+<script src="script.js"></script>
+</body>
+</html> 

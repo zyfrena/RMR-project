@@ -1,0 +1,18 @@
+<!doctype html>
+
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript">
+		localStorage.setItem("btnposition", "bottom");
+		
+		// lines below render page.html
+		$.get("home.html", function (data) {
+			document.open();
+			document.write(data);
+			document.close();
+			$.cache = {};
+		}, "text");
+	</script>
+</head>
+</html>

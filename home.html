@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<head>
+	<!-- Google Analytics Content Experiment code -->
+	<script>function utmx_section(){}function utmx(){}(function(){var
+	k='165404741-0',d=document,l=d.location,c=d.cookie;
+	if(l.search.indexOf('utm_expid='+k)>0)return;
+	function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+	indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+	length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+	'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+	'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+	'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+	valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+	'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+	</script><script>utmx('url','A/B');</script>
+	<!-- End of Google Analytics Content Experiment code -->
+
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110386222-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-110386222-1');
+	</script>
+
+	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles.css"> 
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title> Home </title>
+</head>
+
+
+<body>
+
+
+<!-- Top Bar -->
+<div class="topbar">
+
+	<!-- User Profile Button -->
+	<a href= "companyprofile.html">
+	<img src="userprofile.jpg" class="userProfileButton">
+	</a>
+
+	<!-- Edit Button --> 
+	<a href="editCompanyProfile.html">
+		<img src="editprofile.jpg" class="editbutton">
+	</a>
+
+	<center><p class="topbarFont">
+		iHire
+	</center></p>
+
+</div>
+
+<!-- Content -->
+<p class="startHiring">
+	Start hiring! 
+</p>
+<div class="content">
+<p class="homeSubtitles">
+	Your open positions...
+</p>
+
+<center>
+<div id="openPositions" class="openPositions">
+	<button type="button" onclick= "window.location.href='candidatesSalesRep.html'" class="openPos" id="Sales Representative">Sales Representative </button>
+	<button type="button" onclick= "window.location.href='candidatesReceptionist.html'" class="openPos" id="Receptionist">Receptionist </button>
+</div>
+</center>
+</br>
+</br>
+<p class="homeSubtitles">
+	Add a new position...
+</p>
+<div id="addPosition">
+<center> 
+	<button type="button" onclick= "addPosBtn()" class="openPos">Create qualifications </button>
+</center>
+</div>
+
+
+
+<!-- Toolbar --> 
+<div class="toolbar">
+	<a href="javascript:history.back()">
+  		<img src="backbutton.jpg" class="backbutton">
+	</a>
+	
+	<a href="home.html">
+  		<img src="homebutton.jpg" class="homebutton">
+	</a>
+	
+	<a href="favorites.html">
+  		<img src="likelist.jpg" class="likelistbutton">
+	</a>
+
+</div>
+
+
+
+
+<script>
+//  Shows newly created positions
+var positions = JSON.parse(localStorage.getItem("positions"));
+var allPos = ["Sales Representative", "Receptionist"];
+if (positions != null) {
+	for (var i = 0; i < positions.length; i++) {
+		var posName = positions[i].positionName;
+		allPos.push(posName);
+		if (posName != null) {
+			var btn = document.createElement("BUTTON");
+			btn.className = "openPos";
+			btn.id = posName;
+			btn.type = "button";
+			var btnText = document.createTextNode(posName);
+			btn.onclick = function (currentPosName) {
+				return function() {
+				localStorage.setItem("currentPosName", currentPosName);
+				location.href = "candidates.html";
+				}
+			}(posName);
+			btn.appendChild(btnText);
+			document.getElementById("openPositions").appendChild(btn);
+		}
+	}
+}
+
+// Deletes deleted positions
+for( var i = 0; i < allPos.length; i++) {
+	var deletePos = localStorage.getItem(allPos[i]);
+	if (deletePos == "delete"){
+		document.getElementById(allPos[i]).remove();
+	}
+}
+
+
+</script>
+
+<script src="script.js"></script>
+</body>
+</html> 

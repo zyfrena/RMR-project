@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110386222-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-110386222-1');
+	</script>
+
+	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles.css"> 
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title> Candidates for Receptionist</title>
+</head>
+
+
+<body>
+
+<!-- Top Bar -->
+<div class="topbar">
+
+	<!-- User Profile Button -->
+	<a href= "companyprofile.html">
+	<img src="userprofile.jpg" class="userProfileButton">
+	</a>
+
+	<!-- Edit Button --> 
+	<a href="editCompanyProfile.html">
+		<img src="editprofile.jpg" class="editbutton">
+	</a>
+
+	<center><p class="topbarFont">
+		iHire
+	</center></p>
+
+</div>
+
+
+<p class="candidatesTitle">
+	Candidates that are qualified for
+</p>
+<center><p class="posName" id="Receptionist">Receptionist</p></center>
+
+
+
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~ CONTENT ~~~~~~~~~~~~~~~~~~~~~~~ -->
+<div class="content">
+	<p class="clickACandidate"> Click a name to view their profile.</p>
+<center>
+	<button type="button" onclick="window.location.href='Lisa.html'" class="openPos">Lisa</button>
+	<button type="button" onclick="window.location.href='Mary.html'" class="openPos">Mary</button>
+	<button type="button" onclick="window.location.href='Alexander.html'" class="openPos">Alexander</button>
+	<button type="button" onclick="window.location.href='Vivien.html'" class="openPos">Vivien</button>
+	<button type="button" onclick="window.location.href='Kellan.html'" class="openPos">Kellan</button>
+</center>
+</div>
+</br>
+</br>
+<center><button onclick="deletePos()" class="newPos"> Delete this position</button></center>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Toolbar --> 
+<div class="toolbar">
+	<a href="javascript:history.back()">
+  		<img src="backbutton.jpg" class="backbutton">
+	</a>
+	
+	<a href="home.html">
+  		<img src="homebutton.jpg" class="homebutton">
+	</a>
+	
+	<a href="favorites.html">
+  		<img src="likelist.jpg" class="likelistbutton">
+	</a>
+
+</div>
+	
+
+<script>
+var posName = document.getElementById("Receptionist").id;
+localStorage.setItem("currentPos", posName);
+
+</script>
+
+
+
+<script src="script.js"></script>
+</body>
+</html> 
