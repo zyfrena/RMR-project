@@ -2,14 +2,14 @@
 body {
 	margin:0;
 	height: 100%;
-	background-color: #900020;
+	background-color: #E5E7E6;
 }
 
 
 /******************** TOPBAR *******************/
 .topbar {
   overflow: hidden;
-  background-color: #E5E7E6;	
+  background-color: #95B2B8;	
   width: 100%;
   border-bottom: 3px black solid;
   /*overflow: hidden;
@@ -27,7 +27,7 @@ p.topbarFont {
 /******************** TOOLBAR *********************/
 .toolbar {
   overflow: hidden;
-  background-color: #E5E7E6;
+  background-color: #95B2B8;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -342,8 +342,8 @@ p.candidatesTitle {
 p.posName {
 	margin-top: 30px;
 	font-size: 80px;
-	font-weight: ;
-	color: white;
+	font-weight: bold;
+	color: #343434;
 }
 
 /************************ CANDIDATE PROFILE *******************/
@@ -431,11 +431,16 @@ input.login {
 
 label.login {
 	font-size: 70px;
+	color:#343434;
+}
+
+label.login2 {
+	font-size: 70px;
 	color:white;
 }
 
 .extra {
-	color: white;
+	color: blue;
 	text-align: center;
 	text-decoration: underline;
 	font-size: 40px;
@@ -446,7 +451,7 @@ label.login {
 label.editCompProfile {
 	font-size: 50px;
 	margin-left: 20px;
-	color: white;
+	color: #343434;
 }
 
 textarea.description {
@@ -479,14 +484,15 @@ button.save {
 .compProf {
 	font-size: 60px;
 	text-decoration: bold;
-	color:white;
+	color:#343434;
+	font-weight: bold;
 }
 
 .description {
 	font-size: 40px;
 	max-width: 800px;
 	font-style: italic;
-	color: white;
+	color: #343434;
 }
 
 
